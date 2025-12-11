@@ -52,7 +52,7 @@ const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({ color: 0x0000ff });
 const cube = new THREE.Mesh(geometry, material);
 const cubeTwo = new THREE.Mesh(geometry, material);
-scene.add(cubeTwo);
+// scene.add(cubeTwo);
 scene.add(cube);
 
 const occlusionTestObjects = [cube];
@@ -248,9 +248,9 @@ function animate() {
     requestAnimationFrame(animate);
 
     // cube.rotation.x += 0.01;
-    cubeTwo.position.set(1, 2, 0);
+    // cubeTwo.position.set(1, 2, 0);
     cube.rotation.y += 0.01;
-    cubeTwo.rotation.y += 0.01;
+    // cubeTwo.rotation.y += 0.01;
 
     updateTextPositionAndVisibility();
     updateTextPositionAndVisibility2();
