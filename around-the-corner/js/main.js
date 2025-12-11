@@ -305,7 +305,7 @@ function onClick(event) {
         redirectScheduled = true;
 
         setTimeout(() => {
-            window.location.replace("../../scene-two/index.html");
+            window.location.replace("../scene-two");
         }, 4500);
     }
 }
