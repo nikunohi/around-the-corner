@@ -30,7 +30,8 @@ body {
     background: linear-gradient(180deg, white, red);
 
     background-attachment: fixed;
-    
+    height: 100%; 
+    overflow: hidden;
 
 }
 
