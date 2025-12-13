@@ -18,10 +18,94 @@ body {
     height: 100%;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
 
 body {
     font-size: 1.6rem;
     /* font-size 1.6rem is now the same as 16px */
     line-height: 1.6;
-    background: blue;
+    background: #0000ff;
+
+}
+
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.text-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    text-align-last: left;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    min-height: auto;
+    max-width: 40vw;
+    z-index: 2;
+
+}
+
+.text-block p {
+    font-size: 3rem;
+    line-height: 4rem;
+    font-family: "Overused Grotesk", sans-serif;
+    font-style: normal;
+    transform: skew();
+    color: gold;
+
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+
+
+    animation: entrance 3.5s ease-in;
+    transform-origin: center center;
+}
+
+
+
+@keyframes entrance {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    .text-block {
+        max-width: 60vw;
+    }
+
+    .text-block p {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+    }
+
 }

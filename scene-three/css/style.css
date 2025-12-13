@@ -18,7 +18,6 @@ body {
     height: 100%;
 }
 
-
 body::-webkit-scrollbar {
     display: none;
 }
@@ -27,32 +26,10 @@ body {
     font-size: 1.6rem;
     /* font-size 1.6rem is now the same as 16px */
     line-height: 1.6;
-    /* background: linear-gradient(180deg, white, red); */
-    background-color: red;
-
-    background-attachment: fixed;
-    height: 100%;
-    overflow: hidden;
+    background: blue;
 
 }
 
-@font-face {
-    font-family: "Overused Grotesk";
-    src: url("/typefaces/OverusedGrotesk-VF.woff2") format("woff2-variations");
-    font-weight: 600;
-    font-stretch: 100%;
-    font-style: oblique -10deg;
-}
-
-h1 {
-    font-family: "source-serif-pro", serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.2rem;
-    font-size: 3rem;
-    letter-spacing: -.02rem;
-
-}
 
 .content-wrapper {
     display: flex;
@@ -84,8 +61,8 @@ h1 {
     line-height: 4rem;
     font-family: "Overused Grotesk", sans-serif;
     font-style: normal;
-
-    color: gold;
+    transform: skew();
+    color: #00ff00;
 
     text-shadow:
         -2px -2px 0 #000,
@@ -94,63 +71,52 @@ h1 {
         2px 2px 0 #000;
 
 
-
-}
-
-.exit {
-    animation: entrance 3.5s ease-in;
+    animation: entrance 3.6s ease-in;
     transform-origin: center center;
 }
 
+
+
 @keyframes entrance {
-    30% {
-        transform: scale(100%);
+    0% {
+        opacity: 0;
     }
+
+    85% {
+        opacity: 0;
+    }
+
 
     100% {
-        transform: scale(15%);
+        opacity: 1;
     }
 
 }
 
 
-
-
-#cube-text-1 {
-    position: absolute;
-
-
-    transform: translate(-50%, 0%);
-    color: RED;
-    font-size: 3rem;
-    white-space: nowrap;
-    z-index: 1;
+button {
+    opacity: 80%;
 }
 
-
-
-#cube-text-2 {
+.gif-button {
     position: absolute;
-    text-align: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+    padding: 0.25rem .125rem;
 
-    transform: translate(0%, 70%);
-    color: RED;
-    font-size: 1.6rem;
-    white-space: nowrap;
-    z-index: 1;
+    cursor: pointer;
+    animation: entrance 3.6s ease-in;
+    transform-origin: center center;
 }
 
-#cube-text-3 {
-    position: absolute;
+.gif-button a {
+    text-decoration: none;
 
-    transform: translate(50%, 100%);
-
-    color: RED;
-    font-size: 2.6rem;
-    white-space: nowrap;
-    z-index: 1;
+    color: black;
 }
+
 
 @media (max-width: 640px) {
 

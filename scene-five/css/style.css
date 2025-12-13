@@ -16,8 +16,10 @@ html {
 html,
 body {
     height: 100%;
-}
+    cursor: none;
+    overflow: hidden;
 
+}
 
 body::-webkit-scrollbar {
     display: none;
@@ -27,34 +29,13 @@ body {
     font-size: 1.6rem;
     /* font-size 1.6rem is now the same as 16px */
     line-height: 1.6;
-    /* background: linear-gradient(180deg, white, red); */
-    background-color: red;
-
-    background-attachment: fixed;
-    height: 100%;
-    overflow: hidden;
+    background: #00ff00;
 
 }
 
-@font-face {
-    font-family: "Overused Grotesk";
-    src: url("/typefaces/OverusedGrotesk-VF.woff2") format("woff2-variations");
-    font-weight: 600;
-    font-stretch: 100%;
-    font-style: oblique -10deg;
-}
-
-h1 {
-    font-family: "source-serif-pro", serif;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1.2rem;
-    font-size: 3rem;
-    letter-spacing: -.02rem;
-
-}
 
 .content-wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +45,7 @@ h1 {
 
 
 .text-block {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,6 +56,7 @@ h1 {
     -moz-hyphens: auto;
     min-height: auto;
     max-width: 40vw;
+    pointer-events: none;
     z-index: 2;
 
 }
@@ -84,7 +66,7 @@ h1 {
     line-height: 4rem;
     font-family: "Overused Grotesk", sans-serif;
     font-style: normal;
-
+    transform: skew();
     color: gold;
 
     text-shadow:
@@ -94,62 +76,51 @@ h1 {
         2px 2px 0 #000;
 
 
-
-}
-
-.exit {
-    animation: entrance 3.5s ease-in;
-    transform-origin: center center;
-}
-
-@keyframes entrance {
-    30% {
-        transform: scale(100%);
-    }
-
-    100% {
-        transform: scale(15%);
-    }
-
+    pointer-events: none;
 }
 
 
+.gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    max-width: 90vw;
+    margin-top: 2rem;
+}
 
+.gif img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    padding: 15px;
+}
 
-#cube-text-1 {
+.button-center {
+    position: relative;
+    display: inline-block;
+}
+
+.button-center img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.gif-button {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+    padding: 0.25rem .125rem;
 
-    transform: translate(-50%, 0%);
-    color: RED;
-    font-size: 3rem;
-    white-space: nowrap;
-    z-index: 1;
+    cursor: pointer;
 }
 
-
-
-#cube-text-2 {
-    position: absolute;
-    text-align: left;
-
-
-    transform: translate(0%, 70%);
-    color: RED;
-    font-size: 1.6rem;
-    white-space: nowrap;
-    z-index: 1;
-}
-
-#cube-text-3 {
-    position: absolute;
-
-    transform: translate(50%, 100%);
-
-    color: RED;
-    font-size: 2.6rem;
-    white-space: nowrap;
-    z-index: 1;
+.gif-button a {
+    text-decoration: none;
+    color: black;
 }
 
 @media (max-width: 640px) {
