@@ -106,5 +106,5 @@ function animate() {
 animate(); // execute animation function
 
 setTimeout(() => {
-    window.location.replace("./scene-three/");
+    window.location.replace("./scene-three");
 }, 20000);
