@@ -6,7 +6,7 @@ let quantity = 10;
 
 
 function preload() {
-    font = loadFont('/typefaces/OverusedGrotesk-SemiBold.otf');
+    font = loadFont('../typefaces/OverusedGrotesk-SemiBold.otf');
 }
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
